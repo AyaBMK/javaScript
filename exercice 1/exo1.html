@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayMessage(msg){
+            console.log(msg)
+        }
+        function sayHello()
+        {
+            sayMessage("Début du programme anée bissextile");
+        }
+        function sayGoodbye()
+        {
+            sayMessage("Fin du programme anée bissextile");
+        }
+        function canBeDevidedBy(nb, divisor)
+        {
+            if(nb%divisor === 0){
+                return true;
+            }
+            return false;
+        }
+        function canBeDevidedBy400(nb)
+        {
+            return canBeDevidedBy(nb, 400);
+        }
+        function canBeDevidedBy4(nb)
+        {
+            return canBeDevidedBy(nb, 4);
+        }
+        function canBeDevidedBy100(nb)
+        {
+            return canBeDevidedBy(nb, 100);
+        }
+        function isLeapYear(year){
+            if(canBeDevidedBy400(year)){
+                return true;
+            }
+            if(canBeDevidedBy4(year) && !canBeDevidedBy100(year)){
+                return true;
+            }
+            
+            return false;
+        }
+        function main(){
+            sayHello();
+            console.log("2023 : " + isLeapYear(2023));
+            console.log("1987 : " + isLeapYear(1987));
+            console.log("2004 : " + isLeapYear(2004));
+            console.log("2100 : " + isLeapYear(2100));
+            sayGoodbye();
+        }
+        main();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

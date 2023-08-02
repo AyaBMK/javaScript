@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayMessage(msg){
+            console.log(msg)
+        }
+        function sayHello()
+        {
+            sayMessage("Début du programme");
+        }
+        function sayGoodbye()
+        {
+            sayMessage("Fin du programme");
+        }
+        function Day(dd){
+            if(dd <= 31 && dd >= 1){
+                return Day(dd);
+            }
+            return false;
+        }
+        function Month(mm){
+            if(mm <= 12 && mm >= 1){
+                return Month(mm);
+            }
+            return false;
+        }
+        function isYearValid(yyyy){
+            if(yyyy < 1){
+                return false;
+            }
+            return true;
+        }
+        function isDateValid(day, month, year){
+            if(!isYearValid){
+                return true
+            }
+            return true;
+        }
+        function main(){
+            sayHello();
+            console.log("la date " + isDateValid(22, 11, 2002));
+            sayGoodbye;
+        }
+        main();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
